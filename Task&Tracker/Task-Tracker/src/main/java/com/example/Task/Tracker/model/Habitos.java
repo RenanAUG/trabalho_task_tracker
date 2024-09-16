@@ -21,7 +21,4 @@ public class Habitos {
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
-
-    @OneToMany(mappedBy = "habitos")
-    private List<HabitosHistoricos> habitosHistoricosList;
 }
