@@ -6,6 +6,9 @@ import com.example.Task.Tracker.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UsuarioService {
 
@@ -14,5 +17,9 @@ public class UsuarioService {
 
     public Usuario save(Usuario usuario) {
         return this.usuarioRepository.save(usuario);
+    }
+
+    public List<Usuario> listar(){
+        return this.usuarioRepository.findAll();
     }
 }
