@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <h2>Adicionar Tarefa</h2>
+    <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <input type="text" id="descricao" name="descricao" class="form-control" ngModel required>
+      </div>
+      <div class="mb-3">
+        <label for="data_inicio" class="form-label">Data de Início</label>
+        <input type="date" id="data_inicio" name="data_inicio" class="form-control" ngModel required>
+      </div>
+      <div class="mb-3">
+        <label for="data_limite" class="form-label">Data Limite</label>
+        <input type="date" id="data_limite" name="data_limite" class="form-control" ngModel required>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+  

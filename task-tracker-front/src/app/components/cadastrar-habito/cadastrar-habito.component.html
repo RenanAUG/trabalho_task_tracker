@@ -1,0 +1,11 @@
+<div class="container mt-4">
+    <h2>Adicionar Hábito</h2>
+    <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <input type="text" id="descricao" name="descricao" class="form-control" ngModel required>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+  
