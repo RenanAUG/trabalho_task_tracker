@@ -29,4 +29,8 @@ export class AppComponent {
   sair() {
     this.router.navigate(['/login']);
   }
+  
+  acessarCadastro(){
+    this.router.navigate(['/registro'])
+  }
 }
