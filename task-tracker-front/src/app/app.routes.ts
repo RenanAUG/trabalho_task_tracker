@@ -4,6 +4,7 @@ import { TaskComponent } from './components/task/task.component';
 import { HabitoComponent } from './components/habito/habito.component';
 import { CadastrarTaskComponent } from './components/cadastrar-task/cadastrar-task.component';
 import { CadastrarHabitoComponent } from './components/cadastrar-habito/cadastrar-habito.component';
+import { CadastroUsuarioComponent } from './components/cadastro-usuario/cadastro-usuario.component';
 
 // Definição das rotas
 export const routes: Routes = [
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'habito', component: HabitoComponent },
   { path: 'cadastrar-task', component: CadastrarTaskComponent },
   { path: 'cadastrar-habito', component: CadastrarHabitoComponent },
+  { path: 'registro', component: CadastroUsuarioComponent}
 ];
 
