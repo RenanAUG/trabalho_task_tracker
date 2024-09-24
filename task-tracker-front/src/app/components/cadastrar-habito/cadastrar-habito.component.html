@@ -1,0 +1,17 @@
+  <div class="container">
+    <div class="row justify-content-center align-items-center vh-100">
+      <div class="col-md-4">
+        <div class="login-container p-4 border rounded">
+          <h2 class="text-center mb-4">Cadastrar Hábito</h2>
+          <form [formGroup]="habitoForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição</label>
+              <input type="descricao" id="descricao" class="form-control" formControlName="descricao" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

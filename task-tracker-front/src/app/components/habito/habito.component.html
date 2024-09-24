@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2>Lista de Hábitos</h2>
+
+  <!-- Botão para adicionar novas tarefas -->
+  <button type="submit" class="btn btn-primary w-100" (click)="adicionarHabitos()">Adicionar Hábitos</button>
+
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Descrição</th>
+              <th>Segunda</th>
+              <th>Terça</th>
+              <th>Quarta</th>
+              <th>Quinta</th>
+              <th>Sexta</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let habito of habitos">
+              <td>{{ habito.descricao }}</td>
+              <td>
+                  <input type="checkbox" [(ngModel)]="habito.dias.semana[0]" [disabled]="!isHoje(0)" />
+              </td>
+              <td>
+                  <input type="checkbox" [(ngModel)]="habito.dias.semana[1]" [disabled]="!isHoje(1)" />
+              </td>
+              <td>
+                  <input type="checkbox" [(ngModel)]="habito.dias.semana[2]" [disabled]="!isHoje(2)" />
+              </td>
+              <td>
+                  <input type="checkbox" [(ngModel)]="habito.dias.semana[3]" [disabled]="!isHoje(3)" />
+              </td>
+              <td>
+                  <input type="checkbox" [(ngModel)]="habito.dias.semana[4]" [disabled]="!isHoje(4)" />
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
