@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h2>Lista de Hábitos</h2>
+
+  <!-- Botão para adicionar novas tarefas -->
+  <button type="submit" class="btn btn-primary w-100" (click)="adicionarHabitos()">Adicionar Hábitos</button>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Data Realização</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let habito of habitos">
+        <td>{{ habito.id }}</td>
+        <td>{{ habito.descricao }}</td>
+        <td>
+          <form [formGroup]="form" #habitoForm="ngForm">
+            <input type="date" id="data" name="data" class="form-control" formControlName="data" required>
+          </form>
+        </td>
+        <td>
+          <button class="btn btn-success" (click)="concluirHabito(habito)">Concluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
