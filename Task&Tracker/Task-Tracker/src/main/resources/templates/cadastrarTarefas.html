@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Tarefa</title>
+    <link rel="stylesheet" type="text/css" href="/cadastrarTarefas.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/habitos">Hábitos</a>
+</div>
+
+<!-- Container Principal -->
+<div class="container">
+    <h1>Cadastrar Tarefa</h1>
+
+    <!-- Formulário de Cadastro de Tarefa -->
+    <form th:action="@{/tarefas/save}" method="post">
+        <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" required>
+        </div>
+
+        <div class="form-group">
+            <label for="data_inicio">Data Início:</label>
+            <input type="date" id="data_inicio" name="data_inicio" required>
+        </div>
+
+        <div class="form-group">
+            <label for="data_limite">Data Limite:</label>
+            <input type="date" id="data_limite" name="data_limite" required>
+        </div>
+
+        <div class="button-group">
+
+            <button onclick="window.history.back()"> Voltar </button>
+
+
+            <button type="submit" class="btn-save">Salvar</button>
+        </div>
+    </form>
+</div>
+
+<!-- Estilos Melhorados -->
+<style>
+    /* Estilo geral do corpo */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9fafb;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+    }
+
+    /* Barra de Navegação no topo */
+    .navbar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: #007BFF;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilos do Container */
+    .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilos do Título */
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    /* Estilo dos Grupos de Formulários */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    /* Estilo dos Botões */
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn-back {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-back:hover {
+        background-color: #c82333;
+    }
+
+    .btn-save {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn-save:hover {
+        background-color: #218838;
+    }
+
+    /* Ajustes para Dispositivos Móveis */
+    @media (max-width: 600px) {
+        .container {
+            width: 90%;
+        }
+
+        .navbar a {
+            font-size: 14px;
+        }
+    }
+</style>
+
+</body>
+</html>
